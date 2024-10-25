@@ -1,6 +1,5 @@
 import streamlit as st
 from PIL import Image
-import streamviz
 
 # Page Configurations
 st.set_page_config(
@@ -25,7 +24,6 @@ st.title("Welcome to My Portfolio 👋")
 st.subheader("Hi, I'm Noâm Detournay, a Data Scientist with a passion for AI and Machine Learning.")
 st.write("Feel free to explore my projects and experiences below.")
 
-# Add a separator for a clean look
 st.markdown("---")
 
 # Studies Section
@@ -60,10 +58,6 @@ st.markdown("---")
 
 st.header("💻 My Projects")
 st.markdown("[See projects on my GitHub](https://github.com/NoamDetournay)")
-# Function to create half-circle gauge using streamviz
-def create_half_circle_gauge(f1_score, title):
-    # Gauge display using streamviz
-    streamviz.gauge(f1_score, gTitle=title, gSize="SML")
 
 
 col1, col2 = st.columns(2)
@@ -75,8 +69,6 @@ with col1:
     - Applied data preprocessing, feature engineering, and linear regression to predict housing prices.
     - **Tools**: Python, Scikit-learn, Pandas, Matplotlib.
     """)
-    # Half-circle gauge for F1-Score
-    create_half_circle_gauge(0.75, "F1-Score: 0.75")
 
 with col2:
     st.subheader("2. NLP - Patent Classification")
@@ -84,5 +76,3 @@ with col2:
     - Developed a patent classification model using Natural Language Processing (NLP) techniques.
     - **Tools**: PyTorch, TensorFlow, Python, Streamlit.
     """)
-    # Half-circle gauge for F1-Score
-    create_half_circle_gauge(0.81, "F1-Score: 0.81")
